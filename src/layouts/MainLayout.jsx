@@ -3,14 +3,15 @@ import Navbar from "../components/Navbar";
 
 function MainLayout({ children }) {
   return (
-    <div style={{ display: "flex", minHeight: "100vh" }}>
+    <div className="flex min-h-screen bg-gray-100">
       <Sidebar />
 
-      <div style={{ flex: 1 }}>
+      <div className="flex-1">
         <Navbar />
-        <div style={{ padding: "20px" }}>
+
+        <main className="p-6">
           {children}
-        </div>
+        </main>
       </div>
     </div>
   );
