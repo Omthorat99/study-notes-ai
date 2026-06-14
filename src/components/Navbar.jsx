@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 function Navbar() {
   const user = JSON.parse(localStorage.getItem("user"));
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
 
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   return (
